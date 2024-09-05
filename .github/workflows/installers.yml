@@ -53,11 +53,6 @@ on:
         required: true
         type: boolean
 
-  schedule:
-    # Daily at 4:15 CET (main-branch) and 5:15 CET (release-branch)
-    - cron: '15 3 * * *'
-    - cron: '15 4 * * *'
-
 env:
   CONAN_ARGS: ${{ inputs.conan_args || '' }}
   ENTERPRISE: ${{ inputs.enterprise || false }}
